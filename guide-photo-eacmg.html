@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Pratique de Photographie en Salle - Canon EOS 500D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/css/ionicons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-blue-dark: #1E3A5F;
+            --color-blue-electric: #0084D4;
+            --color-white: #FFFFFF;
+            --color-yellow: #FFB000;
+            --color-gray-light: #F5F5F5;
+            --color-gray-medium: #E8E8E8;
+            --color-text-dark: #2C2C2C;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: var(--color-text-dark);
+            background: var(--color-gray-light);
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: var(--color-white);
+            margin: 20px auto;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            page-break-after: always;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-content {
+            flex: 1;
+            padding: 20mm;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            height: 15mm;
+            background: var(--color-blue-dark);
+            color: var(--color-white);
+            font-size: 11px;
+            padding: 5mm 20mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 3px solid var(--color-blue-electric);
+        }
+
+        .footer-text {
+            font-weight: 500;
+        }
+
+        .page-number {
+            font-weight: 600;
+        }
+
+        /* PAGE 1 - COVER */
+        .page-cover {
+            background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue-electric) 100%);
+            padding: 0;
+        }
+
+        .page-cover .page-content {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--color-white);
+            padding: 0;
+        }
+
+        .cover-logo {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            margin-bottom: 30mm;
+        }
+
+        .cover-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 20mm 0;
+            line-height: 1.3;
+        }
+
+        .cover-subtitle {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 15mm;
+            opacity: 0.95;
+        }
+
+        .cover-specs {
+            background: rgba(255,255,255,0.15);
+            padding: 15mm 20mm;
+            border-radius: 8px;
+            margin: 20mm 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .cover-camera {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 15mm 0;
+            color: var(--color-yellow);
+        }
+
+        .cover-tagline {
+            font-size: 12px;
+            margin-top: 20mm;
+            opacity: 0.85;
+            letter-spacing: 1px;
+        }
+
+        .footer.cover-footer {
+            background: rgba(0,0,0,0.3);
+            border-top: none;
+        }
+
+        /* PAGE 2 - CONCEPTS */
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-blue-dark);
+            margin-bottom: 12mm;
+            border-bottom: 3px solid var(--color-blue-electric);
+            padding-bottom: 5mm;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+            margin-bottom: 10mm;
+        }
+
+        .concept-card {
+            background: var(--color-gray-light);
+            border-left: 4px solid var(--color-blue-electric);
+            padding: 10mm;
+            border-radius: 6px;
+        }
+
+        .concept-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-blue-dark);
+            margin-bottom: 4mm;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .concept-card-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-blue-electric);
+        }
+
+        .concept-card-content {
+            font-size: 11px;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+        }
+
+        .concept-formula {
+            background: var(--color-blue-dark);
+            color: var(--color-white);
+            padding: 8mm;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 8mm 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* PAGE 3 - TABLEAU */
+        .full-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+            margin-top: 10mm;
+        }
+
+        .full-table th {
+            background: var(--color-blue-dark);
+            color: var(--color-white);
+            padding: 8mm 6mm;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid var(--color-blue-electric);
+        }
+
+        .full-table td {
+            padding: 7mm 6mm;
+            border-bottom: 1px solid var(--color-gray-medium);
+            vertical-align: middle;
+        }
+
+        .full-table tr:nth-child(even) {
+            background: var(--color-gray-light);
+        }
+
+        .full-table .highlight {
+            background: rgba(255, 176, 0, 0.15);
+            font-weight: 600;
+            color: var(--color-blue-dark);
+        }
+
+        /* PAGE 4-5 CONTENT */
+        .content-section {
+            margin-bottom: 12mm;
+        }
+
+        .subsection-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-blue-electric);
+            margin-bottom: 6mm;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content-text {
+            font-size: 11px;
+            line-height: 1.6;
+            margin-bottom: 6mm;
+            color: var(--color-text-dark);
+        }
+
+        .settings-card {
+            background: linear-gradient(135deg, var(--color-gray-light) 0%, var(--color-white) 100%);
+            border: 2px solid var(--color-blue-electric);
+            border-radius: 8px;
+            padding: 10mm;
+            margin: 8mm 0;
+        }
+
+        .settings-card-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--color-blue-dark);
+            margin-bottom: 6mm;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .settings-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8mm;
+            margin-bottom: 6mm;
+        }
+
+        .setting-item {
+            text-align: center;
+        }
+
+        .setting-label {
+            font-size: 9px;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3mm;
+        }
+
+        .setting-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-blue-dark);
+            font-family: 'Courier New', monospace;
+        }
+
+        .setting-value.highlight {
+            color: var(--color-yellow);
+            background: rgba(255, 176, 0, 0.1);
+            padding: 4mm;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: rgba(255, 176, 0, 0.15);
+            border-left: 4px solid var(--color-yellow);
+            padding: 8mm;
+            border-radius: 4px;
+            margin: 8mm 0;
+        }
+
+        .warning-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--color-yellow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3mm;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .warning-text {
+            font-size: 10px;
+            line-height: 1.5;
+            color: var(--color-text-dark);
+        }
+
+        .tip-box {
+            background: rgba(0, 132, 212, 0.08);
+            border-left: 4px solid var(--color-blue-electric);
+            padding: 8mm;
+            border-radius: 4px;
+            margin: 8mm 0;
+        }
+
+        .tip-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--color-blue-electric);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3mm;
+        }
+
+        .tip-text {
+            font-size: 10px;
+            line-height: 1.5;
+            color: var(--color-text-dark);
+        }
+
+        /* PAGE 8 - EXPRESS */
+        .express-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12mm;
+            margin-top: 15mm;
+        }
+
+        .express-card {
+            background: var(--color-blue-dark);
+            color: var(--color-white);
+            border-radius: 8px;
+            padding: 15mm;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
+        }
+
+        .express-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10mm;
+            display: block;
+            color: var(--color-yellow);
+        }
+
+        .express-values {
+            display: flex;
+            flex-direction: column;
+            gap: 6mm;
+        }
+
+        .express-value {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .express-note {
+            font-size: 9px;
+            line-height: 1.4;
+            color: rgba(255,255,255,0.8);
+            margin-top: 8mm;
+            padding-top: 8mm;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* COMPARISON */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+            margin: 10mm 0;
+        }
+
+        .comparison-item {
+            background: var(--color-gray-light);
+            border-radius: 6px;
+            padding: 10mm;
+        }
+
+        .comparison-item.bad {
+            border-left: 4px solid #E74C3C;
+        }
+
+        .comparison-item.good {
+            border-left: 4px solid #27AE60;
+        }
+
+        .comparison-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6mm;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .comparison-item.bad .comparison-label {
+            color: #E74C3C;
+        }
+
+        .comparison-item.good .comparison-label {
+            color: #27AE60;
+        }
+
+        .comparison-content {
+            font-size: 10px;
+            line-height: 1.5;
+            color: var(--color-text-dark);
+        }
+
+        /* PRINT MEDIA */
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+            .concept-grid, .express-grid, .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            .settings-values {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1 - COVER -->
+<div class="page page-cover">
+    <div class="page-content">
+        <div class="cover-logo">EACMG</div>
+        <div>
+            <div style="font-size: 13px; font-weight: 600; opacity: 0.9; letter-spacing: 1px;">ÉGLISE DE L'ALLIANCE CHRÉTIENNE ET MISSIONNAIRE DU GABON</div>
+            <div style="font-size: 12px; opacity: 0.85; margin-top: 5mm;">Église locale Fleuve de Grâce et de Guérison</div>
+            <div style="font-size: 12px; opacity: 0.85;">Mveng Ayong</div>
+        </div>
+        <div class="cover-title">Guide Pratique de Photographie en Salle</div>
+        <div class="cover-camera">Canon EOS 500D</div>
+        <div class="cover-specs">Faible luminosité • Baies vitrées • Sans flash • Avec flash</div>
+        <div class="cover-subtitle">Département Communication et Médias</div>
+        <div class="cover-tagline">GUIDE DE RÉFÉRENCE RAPIDE POUR LES PHOTOGRAPHES</div>
+    </div>
+    <div class="footer cover-footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">1</div>
+    </div>
+</div>
+
+<!-- PAGE 2 - CONCEPTS -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Comprendre les réglages photo</div>
+        
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="concept-card-title">
+                    <ion-icon name="settings-outline" class="concept-card-icon"></ion-icon>
+                    ISO - Sensibilité
+                </div>
+                <div class="concept-card-content">
+                    La sensibilité du capteur à la lumière. Plus la valeur est élevée, plus la photo est lumineuse, mais avec du bruit.
+                    <div class="concept-formula">ISO 400 • ISO 1000 • ISO 1600</div>
+                    <strong>En salle sombre :</strong> préférer ISO 1000 ou plus.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-card-title">
+                    <ion-icon name="aperture-outline" class="concept-card-icon"></ion-icon>
+                    Ouverture - f/
+                </div>
+                <div class="concept-card-content">
+                    Le diamètre du diaphragme. Plus la valeur est petite (f/4), plus c'est ouvert et plus il y a de lumière.
+                    <div class="concept-formula">f/4 • f/4.5 • f/5.6</div>
+                    <strong>Canon EOS 500D :</strong> optimiser avec f/4 ou f/4.5.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-card-title">
+                    <ion-icon name="timer-outline" class="concept-card-icon"></ion-icon>
+                    Vitesse d'obturation
+                </div>
+                <div class="concept-card-content">
+                    Durée pendant laquelle le capteur capture la lumière. Vitesse rapide = moins de flou de mouvement.
+                    <div class="concept-formula">1/60 • 1/100 • 1/200 secondes</div>
+                    <strong>Personnes en mouvement :</strong> 1/100 minimum.
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-card-title">
+                    <ion-icon name="flash-outline" class="concept-card-icon"></ion-icon>
+                    Flash - Mode
+                </div>
+                <div class="concept-card-content">
+                    Source de lumière contrôlée. Flash direct = lumière dure. Flash indirect = lumière douce et naturelle.
+                    <div class="concept-formula">OFF • TTL • Flash externe</div>
+                    <strong>Recommandé :</strong> flash externe orienté vers le plafond.
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-label">
+                <ion-icon name="warning-outline"></ion-icon>
+                Règle de priorité
+            </div>
+            <div class="warning-text">
+                <strong>1.</strong> Éviter le flou → contrôler la vitesse. <strong>2.</strong> Trouver la lumière → ajuster l'ouverture. <strong>3.</strong> Affiner l'exposition → modifier l'ISO. <strong>4.</strong> Utiliser le flash si nécessaire.
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-label">💡 À retenir</div>
+            <div class="tip-text">
+                Une photo à ISO 1600 mais nette est préférable à une photo ISO 100 très sombre ou floue. Ne pas chercher systématiquement l'ISO le plus faible.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">2</div>
+    </div>
+</div>
+
+<!-- PAGE 3 - TABLEAU COMPLET -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Tableau complet des réglages</div>
+        
+        <table class="full-table">
+            <thead>
+                <tr>
+                    <th>Situation</th>
+                    <th>Ouverture</th>
+                    <th>Vitesse</th>
+                    <th>ISO</th>
+                    <th>Flash</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Culte normal</strong></td>
+                    <td>f/4</td>
+                    <td>1/80 s</td>
+                    <td>ISO 1000</td>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <td><strong>Louange / Mouvement</strong></td>
+                    <td>f/4</td>
+                    <td>1/100 s</td>
+                    <td>ISO 1600</td>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <td><strong>Prédication</strong></td>
+                    <td>f/4</td>
+                    <td>1/80 s</td>
+                    <td>ISO 800–1250</td>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <td><strong>Groupe immobile</strong></td>
+                    <td>f/4.5</td>
+                    <td>1/60–1/80 s</td>
+                    <td>ISO 800</td>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <td><strong>Baies vitrées</strong></td>
+                    <td>f/4</td>
+                    <td>1/100 s</td>
+                    <td>ISO 400–800</td>
+                    <td>OFF</td>
+                </tr>
+                <tr>
+                    <td><strong>Sujet dos à baie</strong></td>
+                    <td>f/4</td>
+                    <td>1/100 s</td>
+                    <td>ISO 800–1250</td>
+                    <td>Flash d'appoint</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Flash intégré</strong></td>
+                    <td>f/4.5</td>
+                    <td>1/100 s</td>
+                    <td>ISO 400–800</td>
+                    <td>ON</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Flash externe (TTL)</strong></td>
+                    <td>f/4</td>
+                    <td>1/100 s</td>
+                    <td>ISO 800</td>
+                    <td>Plafond</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box" style="margin-top: 15mm;">
+            <div class="tip-label">📌 Adapter selon l'environnement</div>
+            <div class="tip-text">
+                Ces réglages sont des points de départ. Vérifier toujours l'exposition, l'histogramme si disponible, et le mouvement du sujet avant de déclencher.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">3</div>
+    </div>
+</div>
+
+<!-- PAGE 4 - SANS FLASH -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Photographie sans flash</div>
+        
+        <div class="content-section">
+            <div class="subsection-title">Culte normal</div>
+            <div class="content-text">
+                Pour les moments de prédication, de louange ou de prière où les personnes bougent peu. Objectif : rendu naturel en conservant l'ambiance lumineuse de la salle.
+            </div>
+            
+            <div class="settings-card">
+                <div class="settings-card-title">
+                    <ion-icon name="camera-outline"></ion-icon>
+                    Configuration de base
+                </div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">Ouverture</div>
+                        <div class="setting-value">f/4</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value">1/80 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value">1000</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Flash</div>
+                        <div class="setting-value">OFF</div>
+                    </div>
+                </div>
+                <div style="font-size: 9px; color: var(--color-text-dark); line-height: 1.4;">
+                    Mode Manuel (M) • Balance des blancs AWB • Mise au point AF
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="subsection-title">Louange et personnes en mouvement</div>
+            <div class="content-text">
+                Augmenter la vitesse pour capturer les mains levées, les applaudissements et les mouvements du corps. Augmenter aussi l'ISO pour compenser.
+            </div>
+            
+            <div class="settings-card">
+                <div class="settings-card-title">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    Pour éviter le flou
+                </div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">Ouverture</div>
+                        <div class="setting-value">f/4</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value highlight">1/100 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value highlight">1600</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Flash</div>
+                        <div class="setting-value">OFF</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-label">
+                <ion-icon name="bulb-outline"></ion-icon>
+                Important
+            </div>
+            <div class="warning-text">
+                Augmenter la vitesse à 1/100 s minimum pour les personnes en mouvement. ISO 1600 est acceptable en intérieur sombre.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">4</div>
+    </div>
+</div>
+
+<!-- PAGE 5 - AVEC FLASH -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Photographie avec flash</div>
+        
+        <div class="content-section">
+            <div class="subsection-title">Flash intégré du Canon EOS 500D</div>
+            <div class="content-text">
+                Solution de dépannage rapide. Le flash intégré produit une lumière frontale et plutôt dure. À utiliser si pas d'autre option disponible.
+            </div>
+            
+            <div class="settings-card">
+                <div class="settings-card-title">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    Réglages du flash intégré
+                </div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">Ouverture</div>
+                        <div class="setting-value">f/4.5</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value">1/100 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value">400–800</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Flash</div>
+                        <div class="setting-value highlight">ON</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="subsection-title">Flash externe orientable (recommandé)</div>
+            <div class="content-text">
+                Option préférée pour un rendu beaucoup plus naturel. Diriger le flash vers le plafond blanc pour créer une lumière indirecte et douce.
+            </div>
+            
+            <div class="settings-card">
+                <div class="settings-card-title">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                    Flash externe TTL
+                </div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">Ouverture</div>
+                        <div class="setting-value">f/4</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value">1/100 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value">800</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Mode Flash</div>
+                        <div class="setting-value highlight">TTL</div>
+                    </div>
+                </div>
+                <div style="font-size: 9px; color: var(--color-text-dark); line-height: 1.4; margin-top: 6mm;">
+                    <strong>Technique :</strong> Orienter le flash vers le plafond blanc lorsque possible. La lumière rebondit et crée une ambiance naturelle.
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="comparison-item bad">
+                <div class="comparison-label">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Flash direct
+                </div>
+                <div class="comparison-content">
+                    Lumière frontale dure. Ombres marquées derrière les personnes. Reflets visibles dans les yeux. Rendu peu naturel.
+                </div>
+            </div>
+            <div class="comparison-item good">
+                <div class="comparison-label">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    Flash indirect
+                </div>
+                <div class="comparison-content">
+                    Lumière douce venue d'en haut. Ombres atténuées. Rendu naturel. Ambiance conservée.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">5</div>
+    </div>
+</div>
+
+<!-- PAGE 6 - BAIES VITRÉES -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Photographie et baies vitrées</div>
+        
+        <div class="content-section">
+            <div class="subsection-title">Sujet face à la baie</div>
+            <div class="content-text">
+                Risque : surexposition du visage ou de l'arrière-plan. La lumière extérieure peut créer des contrastes importants.
+            </div>
+            <div class="settings-card">
+                <div class="settings-card-title">Réglages conseillés</div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">f/</div>
+                        <div class="setting-value">f/4</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value">1/100 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value">400–800</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Flash</div>
+                        <div class="setting-value">OFF</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="subsection-title">Sujet dos à la baie (contrejour)</div>
+            <div class="content-text">
+                Risque : visage trop sombre. La lumière extérieure éclaire l'arrière du sujet mais crée un contrejour. Solution : flash d'appoint.
+            </div>
+            <div class="settings-card">
+                <div class="settings-card-title">Utiliser un flash d'appoint</div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">f/</div>
+                        <div class="setting-value">f/4</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value">1/100 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value">800–1250</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Flash</div>
+                        <div class="setting-value highlight">Appoint</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="subsection-title">Sujet à côté de la baie</div>
+            <div class="content-text">
+                Situation mixte : partie du visage en lumière directe, partie en ombre. Ajuster l'ISO et la vitesse selon la dominante lumineuse.
+            </div>
+            <div class="settings-card">
+                <div class="settings-card-title">Adapter selon la position</div>
+                <div class="settings-values">
+                    <div class="setting-item">
+                        <div class="setting-label">f/</div>
+                        <div class="setting-value">f/4</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Vitesse</div>
+                        <div class="setting-value">1/80–1/100 s</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">ISO</div>
+                        <div class="setting-value">600–1000</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Flash</div>
+                        <div class="setting-value">OFF ou TTL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-label">💡 Conseil prioritaire</div>
+            <div class="tip-text">
+                Réduire la vitesse et augmenter l'ISO plutôt que d'utiliser le flash si la lumière naturelle est suffisante. Cela conserve l'ambiance naturelle de la salle.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">6</div>
+    </div>
+</div>
+
+<!-- PAGE 7 - NETTETÉ ET ERREURS -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Netteté et erreurs fréquentes</div>
+        
+        <div class="content-section">
+            <div class="subsection-title">Comment éviter les photos floues ?</div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-item bad">
+                    <div class="comparison-label">
+                        <ion-icon name="close-circle-outline"></ion-icon>
+                        Flou de mouvement
+                    </div>
+                    <div class="comparison-content">
+                        La vitesse est trop lente. Le sujet bouge ou vous bougez pendant la capture.
+                    </div>
+                </div>
+                <div class="comparison-item good">
+                    <div class="comparison-label">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        Solution
+                    </div>
+                    <div class="comparison-content">
+                        Augmenter la vitesse. 1/80 → 1/100 → 1/150 s selon le mouvement.
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item bad">
+                    <div class="comparison-label">
+                        <ion-icon name="close-circle-outline"></ion-icon>
+                        Photo trop sombre
+                    </div>
+                    <div class="comparison-content">
+                        Pas assez de lumière. ISO trop faible ou ouverture trop fermée.
+                    </div>
+                </div>
+                <div class="comparison-item good">
+                    <div class="comparison-label">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        Solution
+                    </div>
+                    <div class="comparison-content">
+                        Augmenter l'ISO (800 → 1000 → 1600) ou ouvrir plus l'objectif (f/5.6 → f/4).
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item bad">
+                    <div class="comparison-label">
+                        <ion-icon name="close-circle-outline"></ion-icon>
+                        Photo trop claire
+                    </div>
+                    <div class="comparison-content">
+                        Surexposition. Trop de lumière. ISO trop élevé ou vitesse trop lente.
+                    </div>
+                </div>
+                <div class="comparison-item good">
+                    <div class="comparison-label">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        Solution
+                    </div>
+                    <div class="comparison-content">
+                        Réduire l'ISO (1600 → 1000 → 800) ou augmenter la vitesse (1/80 → 1/100).
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item bad">
+                    <div class="comparison-label">
+                        <ion-icon name="close-circle-outline"></ion-icon>
+                        Visage sombre, fond lumineux
+                    </div>
+                    <div class="comparison-content">
+                        Contrejour ou fort contraste. Lumière extérieure très forte derrière le sujet.
+                    </div>
+                </div>
+                <div class="comparison-item good">
+                    <div class="comparison-label">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        Solution
+                    </div>
+                    <div class="comparison-content">
+                        Utiliser un flash d'appoint pour éclaircir le visage sans perdre l'arrière-plan.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="subsection-title">Les trois piliers du réglage</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8mm; margin: 8mm 0;">
+                <div style="background: rgba(0, 132, 212, 0.1); border-left: 3px solid var(--color-blue-electric); padding: 8mm; border-radius: 4px;">
+                    <div style="font-weight: 700; font-size: 12px; color: var(--color-blue-electric); margin-bottom: 4mm;">Vitesse</div>
+                    <div style="font-size: 9px; line-height: 1.4;">Contrôle le mouvement. Plus rapide = moins de flou.</div>
+                </div>
+                <div style="background: rgba(0, 132, 212, 0.1); border-left: 3px solid var(--color-blue-electric); padding: 8mm; border-radius: 4px;">
+                    <div style="font-weight: 700; font-size: 12px; color: var(--color-blue-electric); margin-bottom: 4mm;">Ouverture</div>
+                    <div style="font-size: 9px; line-height: 1.4;">Contrôle la lumière. Plus ouverte = plus de lumière.</div>
+                </div>
+                <div style="background: rgba(0, 132, 212, 0.1); border-left: 3px solid var(--color-blue-electric); padding: 8mm; border-radius: 4px;">
+                    <div style="font-weight: 700; font-size: 12px; color: var(--color-blue-electric); margin-bottom: 4mm;">ISO</div>
+                    <div style="font-size: 9px; line-height: 1.4;">Contrôle la sensibilité. Plus élevé = plus lumineux, plus de bruit.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">7</div>
+    </div>
+</div>
+
+<!-- PAGE 8 - EXPRESS -->
+<div class="page">
+    <div class="page-content">
+        <div class="section-title">Les réglages à retenir</div>
+        <div style="text-align: center; font-size: 13px; color: var(--color-text-dark); margin-bottom: 15mm;">
+            Trois configurations essentielles pour démarrer rapidement
+        </div>
+
+        <div class="express-grid">
+            <div class="express-card">
+                <span class="express-label">Normal - Sans flash</span>
+                <div class="express-values">
+                    <div class="express-value">f/4</div>
+                    <div class="express-value">1/80 s</div>
+                    <div class="express-value">ISO 1000</div>
+                </div>
+                <div class="express-note">Pour culte normal, prédication</div>
+            </div>
+
+            <div class="express-card">
+                <span class="express-label">Mouvement - Louange</span>
+                <div class="express-values">
+                    <div class="express-value">f/4</div>
+                    <div class="express-value">1/100 s</div>
+                    <div class="express-value">ISO 1600</div>
+                </div>
+                <div class="express-note">Pour personnes en mouvement</div>
+            </div>
+
+            <div class="express-card">
+                <span class="express-label">Flash externe</span>
+                <div class="express-values">
+                    <div class="express-value">f/4</div>
+                    <div class="express-value">1/100 s</div>
+                    <div class="express-value">ISO 800 TTL</div>
+                </div>
+                <div class="express-note">Diriger vers plafond blanc</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20mm; padding: 15mm; background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue-electric) 100%); border-radius: 8px; color: var(--color-white);">
+            <div style="font-size: 13px; font-weight: 700; margin-bottom: 8mm; letter-spacing: 1px; text-transform: uppercase;">Avant de photographier :</div>
+            <div style="font-size: 11px; line-height: 1.6; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm;">
+                <div>✓ Vérifier l'exposition de l'écran</div>
+                <div>✓ Consulter l'histogramme</div>
+                <div>✓ Observer le mouvement du sujet</div>
+                <div>✓ Évaluer la lumière disponible</div>
+                <div>✓ Adapter selon les baies vitrées</div>
+                <div>✓ Déclencher plusieurs fois</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 15mm; padding: 12mm; background: rgba(255, 176, 0, 0.1); border-radius: 6px; border-left: 4px solid var(--color-yellow);">
+            <div style="font-size: 10px; line-height: 1.6; color: var(--color-text-dark);">
+                <strong>Points de départ :</strong> Ces réglages sont des références. Chaque salle et chaque moment diffèrent. Adapter en fonction des conditions réelles et de votre vérification. Une bonne photo nette prime toujours sur l'ISO minimal.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">EACMG • Fleuve de Grâce et de Guérison • Département Communication et Médias</div>
+        <div class="page-number">8</div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.js"></script>
+</body>
+</html>
