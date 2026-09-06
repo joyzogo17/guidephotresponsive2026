@@ -1,16 +1,13 @@
-index_html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portail de Documents & Guides | EACMG</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    # Create index.html with ultra-clean modern design, categorization, icons (Font Awesome CDN), responsive layout, and structured sectioning for guides, web pages, PDFs, and Word documents.
 
     <style>
         :root {
@@ -158,11 +155,11 @@ index_html_content = """<!DOCTYPE html>
             overflow-x: auto;
             padding: 0.5rem 0 1.5rem;
             margin-bottom: 1rem;
-            scrollbar-width: none; /* Firefox */
+            scrollbar-width: none;
         }
 
         .nav-pills::-webkit-scrollbar {
-            display: none; /* Chrome/Safari */
+            display: none;
         }
 
         .pill-btn {
@@ -395,7 +392,6 @@ index_html_content = """<!DOCTYPE html>
 </head>
 <body>
 
-    <!-- Header / Message de bienvenue -->
     <header>
         <div class="header-container">
             <div class="logo-badge">
@@ -406,7 +402,6 @@ index_html_content = """<!DOCTYPE html>
         </div>
     </header>
 
-    <!-- Zone de recherche et Filtres de navigation -->
     <div class="controls-container">
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -414,9 +409,7 @@ index_html_content = """<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- Contenu Principal -->
     <main>
-        <!-- Filtres par catégorie -->
         <div class="nav-pills">
             <a href="#guides" class="pill-btn"><i class="fa-solid fa-compass"></i> Guides Photo & Réglages</a>
             <a href="#pages-web" class="pill-btn"><i class="fa-solid fa-globe"></i> Pages Web HTML</a>
@@ -424,7 +417,6 @@ index_html_content = """<!DOCTYPE html>
             <a href="#word-docs" class="pill-btn"><i class="fa-solid fa-file-word"></i> Documents Word</a>
         </div>
 
-        <!-- SECTION 1: GUIDES PHOTO ET RÉGLAGES -->
         <section id="guides" class="section-block theme-guide">
             <div class="section-header">
                 <div class="section-title">
@@ -435,8 +427,7 @@ index_html_content = """<!DOCTYPE html>
             </div>
 
             <div class="link-grid">
-                <!-- Guide Photo EACMG -->
-                <a href="guide-photo-eacmg.html" class="card" target="_blank">
+                <a href="assets/html/guide-photo-eacmg.html" class="card" target="_blank" rel="noopener noreferrer">
                     <div class="card-top">
                         <div class="card-icon" style="background: var(--guide-bg); color: var(--guide-color);">
                             <i class="fa-solid fa-book-open"></i>
@@ -452,8 +443,7 @@ index_html_content = """<!DOCTYPE html>
                     </div>
                 </a>
 
-                <!-- Guide Photo Responsive -->
-                <a href="guide-photo-responsive.html" class="card" target="_blank">
+                <a href="assets/html/guide-photo-responsive.html" class="card" target="_blank" rel="noopener noreferrer">
                     <div class="card-top">
                         <div class="card-icon" style="background: var(--guide-bg); color: var(--guide-color);">
                             <i class="fa-solid fa-mobile-screen-button"></i>
@@ -469,8 +459,7 @@ index_html_content = """<!DOCTYPE html>
                     </div>
                 </a>
 
-                <!-- Guide Réglages EACMG 500D A4 -->
-                <a href="Guide_Reglages_Photo_EACMG_500D_A4.html" class="card" target="_blank">
+                <a href="assets/html/Guide_Reglages_Photo_EACMG_500D_A4.html" class="card" target="_blank" rel="noopener noreferrer">
                     <div class="card-top">
                         <div class="card-icon" style="background: var(--guide-bg); color: var(--guide-color);">
                             <i class="fa-solid fa-sliders"></i>
@@ -488,8 +477,6 @@ index_html_content = """<!DOCTYPE html>
             </div>
         </section>
 
-
-        <!-- SECTION 2: PAGES WEB INTERACTIVES -->
         <section id="pages-web" class="section-block theme-web">
             <div class="section-header">
                 <div class="section-title">
@@ -500,8 +487,7 @@ index_html_content = """<!DOCTYPE html>
             </div>
 
             <div class="link-grid">
-                <!-- Exemple Page Web HTML -->
-                <a href="assets/pages/exemple-page.html" class="card" target="_blank">
+                <a href="assets/pages/exemple-page.html" class="card" target="_blank" rel="noopener noreferrer">
                     <div class="card-top">
                         <div class="card-icon" style="background: var(--web-bg); color: var(--web-color);">
                             <i class="fa-solid fa-laptop-code"></i>
@@ -519,8 +505,6 @@ index_html_content = """<!DOCTYPE html>
             </div>
         </section>
 
-
-        <!-- SECTION 3: DOCUMENTS PDF -->
         <section id="pdf-docs" class="section-block theme-pdf">
             <div class="section-header">
                 <div class="section-title">
@@ -531,8 +515,7 @@ index_html_content = """<!DOCTYPE html>
             </div>
 
             <div class="link-grid">
-                <!-- Exemple PDF -->
-                <a href="assets/pdf/guide-complet-eacmg.pdf" class="card" target="_blank">
+                <a href="assets/pdf/guide-complet-eacmg.pdf" class="card" target="_blank" rel="noopener noreferrer">
                     <div class="card-top">
                         <div class="card-icon" style="background: var(--pdf-bg); color: var(--pdf-color);">
                             <i class="fa-solid fa-file-pdf"></i>
@@ -550,8 +533,6 @@ index_html_content = """<!DOCTYPE html>
             </div>
         </section>
 
-
-        <!-- SECTION 4: DOCUMENTS WORD -->
         <section id="word-docs" class="section-block theme-word">
             <div class="section-header">
                 <div class="section-title">
@@ -562,8 +543,7 @@ index_html_content = """<!DOCTYPE html>
             </div>
 
             <div class="link-grid">
-                <!-- Exemple Document Word -->
-                <a href="assets/word/trame-rapport-eacmg.docx" class="card" target="_blank">
+                <a href="assets/word/trame-rapport-eacmg.docx" class="card" target="_blank" rel="noopener noreferrer">
                     <div class="card-top">
                         <div class="card-icon" style="background: var(--word-bg); color: var(--word-color);">
                             <i class="fa-solid fa-file-word"></i>
@@ -582,13 +562,11 @@ index_html_content = """<!DOCTYPE html>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2026 EACMG - Dépôt GitHub : <a href="https://github.com/joyzogo17/guidephotresponsive2026" target="_blank">joyzogo17/guidephotresponsive2026</a></p>
+        <p>© 2026 EACMG - Dépôt GitHub : <a href="https://github.com/joyzogo17/guidephotresponsive2026" target="_blank" rel="noopener noreferrer">joyzogo17/guidephotresponsive2026</a></p>
         <p style="margin-top: 4px; font-size: 0.8rem; color: #94a3b8;">Portail d'accueil responsive & optimisé pour la communication interne et externe.</p>
     </footer>
 
-    <!-- Script de recherche dynamique -->
     <script>
         function filterLinks() {
             const input = document.getElementById('searchInput').value.toLowerCase();
@@ -608,9 +586,3 @@ index_html_content = """<!DOCTYPE html>
     </script>
 </body>
 </html>
-"""
-
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(index_html_content)
-
-print("File index.html generated successfully.")
