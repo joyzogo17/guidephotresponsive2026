@@ -55,14 +55,42 @@
             flex-direction: column;
         }
 
-        /* Header / Hero Section */
+        /* Hero Container / Cover Wrapper */
+        .hero-cover-container {
+            max-width: 1140px;
+            margin: 1.5rem auto 0;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        .cover-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1584 / 672;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background-color: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* Header / Title Section */
         header {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #ffffff;
-            padding: 4rem 1.5rem 3.5rem;
+            padding: 3rem 1.5rem 3.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
+            margin-top: 1.5rem;
         }
 
         header::before {
@@ -370,8 +398,18 @@
 
         /* Responsive Breakpoints */
         @media (max-width: 768px) {
+            .hero-cover-container {
+                margin-top: 1rem;
+                padding: 0 1rem;
+            }
+
+            .cover-wrapper {
+                border-radius: var(--radius-md);
+            }
+
             header {
-                padding: 3rem 1rem 2.5rem;
+                padding: 2.5rem 1rem 2rem;
+                margin-top: 1rem;
             }
 
             header h1 {
@@ -393,6 +431,15 @@
     </style>
 </head>
 <body>
+
+    <div class="hero-cover-container">
+        <div class="cover-wrapper">
+            <img src="assets/images/EACMG FDG COVER1.jfif" 
+                 alt="Bannière du Département Communication et Médias — Église Locale Fleuve de Grâce et de Guérison de MVENG-AYONG" 
+                 class="cover-image"
+                 loading="eager">
+        </div>
+    </div>
 
     <header>
         <div class="header-container">
