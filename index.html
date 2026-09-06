@@ -55,33 +55,6 @@
             flex-direction: column;
         }
 
-        /* Hero Container / Cover Wrapper */
-        .hero-cover-container {
-            max-width: 1140px;
-            margin: 1.5rem auto 0;
-            padding: 0 1.5rem;
-            width: 100%;
-        }
-
-        .cover-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 1584 / 672;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            background-color: #0f172a;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .cover-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-
         /* Header / Title Section */
         header {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -90,7 +63,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            margin-top: 1.5rem;
         }
 
         header::before {
@@ -178,6 +150,37 @@
             background: transparent;
         }
 
+        /* Main Container */
+        main {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* Cover Image Container — Full-width relative to main, Zero margins, Zero padding */
+        .cover-container {
+            width: calc(100% + 3rem);
+            margin: 0 -1.5rem 2rem -1.5rem;
+            padding: 0;
+            overflow: hidden;
+            line-height: 0;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cover-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            object-fit: cover;
+        }
+
         /* Quick Navigation Bar */
         .nav-pills {
             display: flex;
@@ -214,15 +217,6 @@
             color: #ffffff;
             border-color: var(--primary);
             transform: translateY(-1px);
-        }
-
-        /* Main Container */
-        main {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 1.5rem 4rem;
-            width: 100%;
-            flex: 1;
         }
 
         /* Section Layout */
@@ -398,18 +392,8 @@
 
         /* Responsive Breakpoints */
         @media (max-width: 768px) {
-            .hero-cover-container {
-                margin-top: 1rem;
-                padding: 0 1rem;
-            }
-
-            .cover-wrapper {
-                border-radius: var(--radius-md);
-            }
-
             header {
                 padding: 2.5rem 1rem 2rem;
-                margin-top: 1rem;
             }
 
             header h1 {
@@ -427,19 +411,19 @@
             .controls-container {
                 margin-top: -1.25rem;
             }
+
+            .cover-container {
+                width: calc(100% + 2rem);
+                margin: 0 -1rem 1.5rem -1rem;
+            }
+
+            main {
+                padding: 0 1rem 3rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="hero-cover-container">
-        <div class="cover-wrapper">
-            <img src="assets/images/EACMG FDG COVER1.jfif" 
-                 alt="Bannière du Département Communication et Médias — Église Locale Fleuve de Grâce et de Guérison de MVENG-AYONG" 
-                 class="cover-image"
-                 loading="eager">
-        </div>
-    </div>
 
     <header>
         <div class="header-container">
@@ -459,6 +443,11 @@
     </div>
 
     <main>
+        <!-- COVER IMAGE FULL-WIDTH PAR RAPPORT AU CONTENEUR PRINCIPAL -->
+        <div class="cover-container">
+            <img src="./assets/images/cover.jfif" alt="Bannière du Département Communication et Médias — Église Locale Fleuve de Grâce et de Guérison de MVENG-AYONG">
+        </div>
+
         <div class="nav-pills">
             <a href="#guides" class="pill-btn"><i class="fa-solid fa-compass"></i> Guides Photo & Réglages</a>
             <a href="#pages-web" class="pill-btn"><i class="fa-solid fa-globe"></i> Pages Web HTML</a>
